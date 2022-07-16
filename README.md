@@ -1,4 +1,4 @@
-# [IsInternetConnected](IsInternetConnected.github.io) 
+# [IsInternetConnected](https://ashfaqalizardariofficial.github.io/IsInternetConnected.github.io) 
 by ***Ashfaq Ali Zardari*** 
 A native JavaScript programming code to check whether internet is connected or not.
 
