@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHFAQ ALI ZARDARI | Is Internet Connected (JavaScript)</title>
+    <script src="./jquery.min.js"></script>
+    <style>
+        body {
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: gray;
+            text-align: center;
+        }
+
+        h1 {
+            padding: 4%;
+            background-color: white;
+            border-top-left-radius: 8%;
+            border-bottom-right-radius: 8%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="internet_connection">Reconnecting to internet...</h1>
+    <script>
+
+        // Is internet connected.
+        function retry_connection() {
+            var msg = document.getElementById("internet_connection");
+            var url = "https://raw.githubusercontent.com/AshfaqAliZardariOfficial/IsInternetConnected.github.io/master/1x1.png";
+            setInterval(function () {
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    timeout: 5000,
+                    success: function () {
+                        msg.style.color = "green";
+                        msg.innerHTML = "Connected to internet!";
+                        console.log("Connected!");
+                    },
+                    error: function () {
+                        msg.style.color = "red";
+                        msg.innerHTML = "No connection.";
+                        console.log("No connection.");
+                    }
+                })
+            }, 1000);
+        }
+
+        // Start the magic!
+        retry_connection();
+
+    </script>
+</body>
+
+</html>
